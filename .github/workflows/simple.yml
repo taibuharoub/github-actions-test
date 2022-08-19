@@ -27,3 +27,12 @@ jobs:
       - name: Directory Bash
         run: pwd
         shell: bash
+  run-windows-commands-in-series:
+    runs-on: windows-latest
+    needs: ["run-windows-commands"]
+    steps:
+      - name: Directory PowerShell
+        run: ipconfig
+      - name: Directory Bash
+        run: pwd
+        shell: bash
