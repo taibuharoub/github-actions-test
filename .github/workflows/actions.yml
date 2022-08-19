@@ -15,4 +15,4 @@ jobs:
           who-to-greet: Taibu Haroub
       - name: Log Greeting Time
         # referencing the Simple JS Actions step 
-        run: echo "{{ steps.greet.outputs.time }}"
+        run: echo "${{ steps.greet.outputs.time }}"
