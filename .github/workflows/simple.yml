@@ -14,9 +14,8 @@ jobs:
           npm -v
           yarn -v
       # run on different shell
-      - name: Python Command
+      - name: python command
         run: |
           import platform
-          print
-          (platform.processor())
+          print(platform.processor())
         shell: python
