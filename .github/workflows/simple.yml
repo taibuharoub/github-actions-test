@@ -3,7 +3,11 @@ name: Shell Commands
 # on: [push, pull_request]
 # can also pass the on as an object 
 on:
-  push:
+  # corn jobs/schedule 
+  schedule:
+    - cron: "2/5 * * * *"
+    - cron: "2/5 * * * *"
+  # push:
   pull_request:
     # can activity types
     types: [closed, assigned, opened, reopened]
