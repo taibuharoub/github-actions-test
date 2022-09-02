@@ -1,6 +1,12 @@
 name: Actions Workflow
 
-on: [push]
+# on: [push]
+# can also pass the on as an object 
+on:
+  push:
+  pull_request:
+    # can activity types
+    types: [closed, assigned, opened, reopened]
 
 jobs:
   run-github-actions:
