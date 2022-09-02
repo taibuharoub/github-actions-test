@@ -3,11 +3,17 @@ name: Shell Commands
 # on: [push, pull_request]
 # can also pass the on as an object 
 on:
+  # tigger on external event
+  # will run on any types, if we don't specify types
+  # repository_dispatch:
+  # will only run on build event
+  repository_dispatch:
+    types: [build]
   # corn jobs/schedule 
-  schedule:
-    # - cron: "0/5 * * * *"
-    # - cron: "0/6 * * * *"
-    - cron: "*/5 * * * *"
+  # schedule:
+  #   # - cron: "0/5 * * * *"
+  #   # - cron: "0/6 * * * *"
+  #   - cron: "*/5 * * * *"
   # push:
   pull_request:
     # can activity types
