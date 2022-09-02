@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Extract client payload on repo dispatch
-        run: echo ${{github.event.client_payload}}
+        run: echo "${{github.event.client_payload}}"
       - name: echo a string
         run: echo "Hello World"
       - name: multiline script
