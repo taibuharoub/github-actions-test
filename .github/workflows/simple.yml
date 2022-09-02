@@ -19,7 +19,7 @@ jobs:
           node -v
           npm -v
           yarn -v
-      # run on different shells
+      # run on different OS shells
       - name: python command
         run: |
           import platform
