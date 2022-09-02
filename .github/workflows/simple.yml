@@ -5,8 +5,9 @@ name: Shell Commands
 on:
   # corn jobs/schedule 
   schedule:
-    - cron: "0/5 * * * *"
-    - cron: "0/6 * * * *"
+    # - cron: "0/5 * * * *"
+    # - cron: "0/6 * * * *"
+    - cron: "*/5 * * * *"
   # push:
   pull_request:
     # can activity types
