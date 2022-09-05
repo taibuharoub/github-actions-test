@@ -3,6 +3,38 @@ name: Shell Commands
 # on: [push, pull_request]
 # can also pass the on as an object 
 on:
+  # filter workflows on branches, tags, paths
+  push:
+    branches:
+      - main
+      # matches anything that starts with feature/ 
+      - "feature/*"
+      # match feature/something/something
+      - "feature/**"
+      # exclude a feature by adding a ! symbol
+      - "!feature/featC"
+    # tags:
+    #   - v1
+    #   - v1.*
+    # tags-ignore:
+    #   - v2
+    # can also filter by paths
+    # paths:
+    #   # will match any js file in our repo 
+    #   - "**.js"
+    #   # ignore a certain file
+    #   - "!filename.js"
+    # paths-ignore:
+    #   - "docs/**"
+  # run on all branches expect listed 
+  # push:
+  #   branches-ignore:
+  #     - develop
+  #     - devops
+  #     - "feature/*"
+  # pull_request:
+  #   branches:
+  #     - main
   # tigger on external event
   # will run on any types, if we don't specify types
   # repository_dispatch:
@@ -15,9 +47,9 @@ on:
   #   # - cron: "0/6 * * * *"
   #   - cron: "*/5 * * * *"
   # push:
-  pull_request:
-    # can activity types
-    types: [closed, assigned, opened, reopened]
+  # pull_request:
+  #   # can activity types
+  #   types: [closed, assigned, opened, reopened]
 
 jobs:
   run-shell-command:
