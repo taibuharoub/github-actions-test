@@ -1,6 +1,6 @@
 name: ENV Variables - 2 - Create issue on commit
 
-on: pull_request
+on: push
 
 jobs:
   create_issue:
@@ -26,7 +26,7 @@ jobs:
           git add -A
           git commit -m"Random file"
           git status
-          git push -u origin main
+          git push --set-upstream origin main
       - name: Create issue using REST API
         run: |
           curl --request POST \
